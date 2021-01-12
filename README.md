@@ -6,6 +6,7 @@
 # ImageProcessing:
 - DONE Check recursion resets work fine
 - Function for setting pixels in img data (awfully lot of repeated code)
+- Travelling Salesman: heuristic for along gradient lines?
 
 # Fourier
 - Implement FFT.
