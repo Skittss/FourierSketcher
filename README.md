@@ -13,6 +13,7 @@
 - Implement FFT.
 - Dont draw vectors smaller than can bee seen (1 px or less)
 - Fix small visual artefacts from pointer starting in top left?
+- Fix DFT does not take into account order of pts.
 
 # Export
 - Framerate: points per second. Can use n points and framerate to calculate playback duration
