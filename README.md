@@ -5,7 +5,7 @@
 - WORKERS! STOP FREEZING ON ME FIREFOX!!
 # ImageProcessing:
 - DONE Check recursion resets work fine
-- Function for setting pixels in img data (awfully lot of repeated code)
+- DONE Function for setting pixels in img data (awfully lot of repeated code)
 - Travelling Salesman: heuristic for along gradient lines?
 - FIx sampling, currently duplicates some of the left of the image due to division into non-precise partitions?
 
