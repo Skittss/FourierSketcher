@@ -6,14 +6,17 @@
 # ImageProcessing:
 - DONE Check recursion resets work fine
 - DONE Function for setting pixels in img data (awfully lot of repeated code)
-- Travelling Salesman: heuristic for along gradient lines?
-- FIx sampling, currently duplicates some of the left of the image due to division into non-precise partitions?
+- WIP (Currently greedy best-first) Travelling Salesman: heuristic for along gradient lines?
+- DONE FIx sampling, currently duplicates some of the left of the image due to division into non-precise partitions?
 
 # Fourier
 - Implement FFT.
 - Dont draw vectors smaller than can bee seen (1 px or less)
-- Fix small visual artefacts from pointer starting in top left?
-- Fix DFT does not take into account order of pts.
+- DONE Fix small visual artefacts from pointer starting in top left?
+- DONE Fix DFT does not take into account order of pts.
+- Interpolation # Settings
+- Accuracy settings (# cycles)
 
 # Export
 - Framerate: points per second. Can use n points and framerate to calculate playback duration
+- Resolution/Point scale settings
