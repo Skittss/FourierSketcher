@@ -3,6 +3,8 @@
 # TODO
 # General:
 - WORKERS! STOP FREEZING ON ME FIREFOX!!
+- Better CSS especially sliders. Perhaps have a tooltip value
+
 # ImageProcessing:
 - DONE Check recursion resets work fine
 - DONE Function for setting pixels in img data (awfully lot of repeated code)
