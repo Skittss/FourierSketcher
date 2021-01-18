@@ -22,3 +22,4 @@
 # Export
 - Framerate: points per second. Can use n points and framerate to calculate playback duration
 - Resolution/Point scale settings
+- Points rendered can give a percentage progress
