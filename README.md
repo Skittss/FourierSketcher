@@ -23,3 +23,4 @@
 - Framerate: points per second. Can use n points and framerate to calculate playback duration
 - Resolution/Point scale settings
 - Points rendered can give a percentage progress
+- More efficient rendering system based on layers? Layer for sinusoids, layer for coords. coord layer can be simply added to, and sinusoids replaced.
