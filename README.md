@@ -4,6 +4,7 @@
 # General:
 - WORKERS! STOP FREEZING ON ME FIREFOX!!
 - Better CSS especially sliders. Perhaps have a tooltip value
+- Possibly switch to java & processing for better performance and easier exports? Consider possibilities of using shaders too
 
 # ImageProcessing:
 - DONE Check recursion resets work fine
