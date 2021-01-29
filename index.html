@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fourier Sketcher</title>
+  <script src="../p5.js"></script>
+  <script src="kdTree.js"></script>
+  <script src="complex.js"></script>
+  <script src="imageprocessing.js"></script>
+  <script src="fourier.js"></script>
+  <link rel = "stylesheet" type="text/css" href = "style.css">
+</head>
+
+<body>
+  <main>
+    <div class = "wrapper">
+      <header>
+        <h1>
+          Fourier Sketching with Image Edgefinding
+        </h1>
+      </header>
+      <hr>
+      <div class="imageProcessing">
+        <header>
+          <h2>
+            Image Processing Settings
+          </h2>
+        </header>
+        <hr>
+        <div class = parameters>
+          <div class = "row">
+            <div class = "col4">
+              <h3>Rendering & Image</h3>
+              <div class = "options">
+                <label id="loadingIndicator">Input image:</label>
+                <input id="img" type="file" accept="image/*">
+                <br>
+                <label>Resize image to fit canvas?</label>
+                <input id="resizeInputs" type="checkbox" checked="true">
+                <br>
+                <label>Process continually?</label>
+                <input id="continuallyProcess" type="checkbox">
+                <br>
+                <label>Process on parameter change?</label>
+                <input id="processOnParamChange" type="checkbox">
+                <br>
+                <input id="processOnce" type="button" value="Process Once">
+              </div>
+            </div>
+            <div class = "col4">
+              <h3>Gaussian Blur</h3>
+              <div class = "options">
+                <label>Blur radius</label><br>
+                <input id="gaussianblurAmt" type="range" min="0" max="5" value="2" step="l">
+              </div>
+            </div>
+            <div class = "col4">
+              <h3>Edge Threshold</h3>
+              <div class = "options">
+                <label>Low</label><br>
+                <input id="loThreshold" type="range" min="0" max="1" value="0.6" step="0.01">
+                <br>
+                <label>High</label><br>
+                <input id="hiThreshold" type="range" min="0" max="1" value="0.08" step="0.01">
+              </div>
+            </div>
+            <div class = "col4">
+              <h3>Hysteresis</h3>
+              <div class = "options">
+                <label>Tolerance</label><br>
+                <input id="hysteresisPasses" type="range" min="1" max="5" value="1" step="1">
+              </div>
+            </div>
+            <div class = "col4">
+              <h3>Sampling</h3> 
+              <div class = "options">
+                <label>Sample image?</label>
+                <input id="doSample" type="checkbox" checked="true">
+                <br><br>
+                <label>Frequency</label><br>
+                <input id="sampleFrequency" type="range" min="1" max="100" value="100" step="1">
+              </div>
+            </div>
+          </div>
+          <br>
+          <hr>
+          <div id="processingSketch"></div>
+          <hr>
+          <br>
+        </div>
+      </div>
+      <hr>
+      <div class = "fourier">
+        <header>
+          <h2>
+            Fourier Sketching Settings
+          </h2>
+        </header>
+        <hr>
+        <div class="parameters">
+          <div class="row">
+            <div class="col3">
+              <h3>Fourier Transform</h3>
+              <div class="options">
+                <label>Accuracy</label><br>
+                <input id="fourierAccuracy" type="range" min="1" max ="1" value="1" step="1">
+                <br>
+                <label>Interpolation Amount</label><br>
+                <input id="interpolationAmount" type="range" min="0" max="10" value="0" step="1">
+                <br>
+                <label>Upscale Dimensions</label><br>
+                <input id="computeFourier" type="button" value="Compute">
+
+              </div>
+            </div>
+            <div class="col3">
+              <h3>Visuals</h3>  
+              <div class="options">
+                <label>Canvas Extension (%)</label><br>
+                <input id="canvasExtension" type="range" min="0" max="1" value="0" step = "0.01"><br>
+                <label>Sinusoid Opacity</label><br>
+                <input id="sinusoidOpacity" type="range" min="0" max="1" value="0.4" step="0.01"><br>
+                <label>Sinusoid Culling</label><br>
+                <input id="magnitudeCullAmount" type="range" min="0" max="2" value="1" step="0.5"><br>
+                <label>Point Size</label><br>
+                <input id="pointSize" type="range" min="1" max="5" value="1.5" step="0.5">
+              </div>
+            </div>
+            <div class="col3">
+              <h3>Export</h3>
+              <div class="options">
+                <label>Framerate</label><br>
+                <label>Duration</label><br>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div id="sketch"></div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
