@@ -3,7 +3,7 @@
 # TODO
 # General:
 - WORKERS! STOP FREEZING ON ME FIREFOX!!
-- Better CSS especially sliders. Perhaps have a tooltip value
+- Better CSS especially sliders. Perhaps have a tooltip value. Much of this could be done in ReactJs.
 - Possibly switch to java & processing for better performance and easier exports? Consider possibilities of using shaders too
 
 # ImageProcessing:
