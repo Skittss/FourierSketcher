@@ -11,6 +11,7 @@
 - DONE Function for setting pixels in img data (awfully lot of repeated code)
 - WIP (Currently greedy best-first) Travelling Salesman: heuristic for along gradient lines?
 - DONE FIx sampling, currently duplicates some of the left of the image due to division into non-precise partitions?
+- Better sampling method: Pixel density based approach. Sample proportional to the amount of strong pixels.
 
 # Fourier
 - Implement FFT.
