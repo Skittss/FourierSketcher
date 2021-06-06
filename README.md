@@ -1,6 +1,6 @@
 # FourierSketcher
 
-A Simple HTML-JS Prototype which takes images, finds edges, then draws them with a complex fourier transform. See portfolio website for an updated, cleaner version of this project.
+A Simple HTML-JS Prototype which takes images, finds edges, then draws them with a complex fourier transform. See portfolio website for an updated, cleaner version of the image processing in this project.
 
 # TODO
 # General:
