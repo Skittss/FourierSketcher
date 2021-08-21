@@ -12,7 +12,7 @@ var s1 = function(s)
   var interpMult = 1;
   var drawnPoints = [];
   var complexitySlider;
-  var complexityTag;
+  // var complexityTag;
   var computeButton;
   var interpolationSlider;
   var canvasExtensionSlider;
@@ -41,8 +41,8 @@ var s1 = function(s)
     complexitySlider = document.getElementById("fourierAccuracy");
     complexitySlider.onchange = changeComplexity;
 
-    complexityTag = s.createP(`Current complexity (# of coefficients): ${1}`).parent(divId);
-    complexityTag.position(10,20);
+    // complexityTag = s.createP(`Current complexity (# of coefficients): ${1}`).parent(divId);
+    // complexityTag.position(10,20);
 
     computeButton = document.getElementById("computeFourier");
     computeButton.onclick = loadImagePoints;
@@ -247,7 +247,7 @@ var s1 = function(s)
 
   function changeComplexity()
   {
-    complexityTag.html(`Current complexity (# of coefficients): ${complexitySlider.value}`)
+    // complexityTag.html(`Current complexity (# of coefficients): ${complexitySlider.value}`)
     resetDrawing();
     drawableVectors = vectors.slice(0, complexitySlider.value);
     drawableVectors.sort((a, b) => b.complex.mag() - a.complex.mag());
