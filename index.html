@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fourier Sketcher</title>
-  <script src="../p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
   <script src="kdTree.js"></script>
   <script src="complex.js"></script>
   <script src="imageprocessing.js"></script>
@@ -37,8 +37,9 @@
                 <label id="loadingIndicator">Input image:</label>
                 <input id="img" type="file" accept="image/*">
                 <br>
-                <label>Resize image to fit canvas?</label>
+                <label>Resize image to canvas size?</label>
                 <input id="resizeInputs" type="checkbox" checked="true">
+                <br /><i>(Image preview will remain a fixed size)</i>
                 <br>
                 <label>Process continually?</label>
                 <input id="continuallyProcess" type="checkbox">
@@ -79,7 +80,7 @@
                 <label>Sample image?</label>
                 <input id="doSample" type="checkbox" checked="true">
                 <br><br>
-                <label>Frequency</label><br>
+                <label>Frequency<br /><i>(High frequency may significantly decrease performance/freeze the page)</i></label><br>
                 <input id="sampleFrequency" type="range" min="1" max="100" value="100" step="1">
               </div>
             </div>
